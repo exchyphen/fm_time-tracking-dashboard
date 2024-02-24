@@ -3,14 +3,14 @@ import "./App.css";
 
 import StatComponent from "./components/statComponent";
 
-/* images */
-import PersonImg from "./assets/images/image-jeremy.png";
-import IconWork from "./assets/images/icon-work.svg";
-import IconPlay from "./assets/images/icon-play.svg";
-import IconStudy from "./assets/images/icon-study.svg";
-import IconExercise from "./assets/images/icon-exercise.svg";
-import IconSocial from "./assets/images/icon-social.svg";
-import IconSelfCare from "./assets/images/icon-self-care.svg";
+/* images, since we are passing these urls to a component (different directory) -> use absolute path */
+import PersonImg from "/src/assets/images/image-jeremy.png";
+import IconWork from "/src/assets/images/icon-work.svg";
+import IconPlay from "/src/assets/images/icon-play.svg";
+import IconStudy from "/src/assets/images/icon-study.svg";
+import IconExercise from "/src/assets/images/icon-exercise.svg";
+import IconSocial from "/src/assets/images/icon-social.svg";
+import IconSelfCare from "/src/assets/images/icon-self-care.svg";
 
 function App() {
   const [timeframe, setTimeframe] = useState("weekly");
