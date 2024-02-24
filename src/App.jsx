@@ -33,6 +33,13 @@ function App() {
     const arr = Array(statsData.length);
 
     for (let i = 0; i < statsData.length; i++) {
+      const setBG = {
+        backgroundImage: `url(${imgArr[i]})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "top -5px right 1rem",
+        backgroundColor: `var(--${nameArr[i]})`,
+      };
+
       arr[i] = (
         <StatComponent
           key={`statComponent${i}`}
@@ -41,6 +48,7 @@ function App() {
           title={statsData[i].title}
           timeframes={statsData[i].timeframes}
           displayTimeframe={timeframe}
+          setBG={setBG}
         ></StatComponent>
       );
     }

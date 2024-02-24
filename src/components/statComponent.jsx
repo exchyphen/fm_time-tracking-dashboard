@@ -19,20 +19,12 @@ const StatComponent = (props) => {
     }
   };
 
-  /* style based on props data */
-  const setBG = {
-    backgroundImage: `url(${props.img})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "top -5px right 1rem",
-    backgroundColor: `var(--${props.name})`,
-  };
-
   useEffect(() => {
     createPreviousMessage();
   }, [props.displayTimeframe]);
 
   return (
-    <section className="stat-container" style={setBG}>
+    <section className="stat-container" style={props.setBG}>
       <div className="stat-content-container">
         <div className="stat-title">{props.title}</div>
         <div className="hours-container">
